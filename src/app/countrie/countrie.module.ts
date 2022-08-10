@@ -4,6 +4,7 @@ import { ForCapitalComponent } from './pages/for-capital/forCapital.component';
 import { ForCountrieComponent } from './pages/for-countrie/for-countrie.component';
 import { ForRegionComponent } from './pages/for-region/for-region.component';
 import { SeeCountrieComponent } from './pages/see-countrie/see-countrie.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -22,7 +23,8 @@ import { SeeCountrieComponent } from './pages/see-countrie/see-countrie.componen
     SeeCountrieComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class CountrieModule { }

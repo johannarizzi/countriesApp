@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountrieService } from '../../services/countrie.service';
 
 @Component({
   selector: 'app-for-countrie',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForCountrieComponent implements OnInit {
 
-  constructor() { }
+   term: string = '';
+
+  constructor(private countrieService: CountrieService) { }
 
   ngOnInit(): void {
+  }
+
+  search() {
+    console.log(this.term);
+    
+    this.countrieService.searchCountrie(this.term)
+    .subscribe( resp => {
+      console.log(resp)
+    })
   }
 
 }
