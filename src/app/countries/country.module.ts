@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ForCapitalComponent } from './pages/for-capital/forCapital.component';
-import { ForCountrieComponent } from './pages/for-countrie/for-countrie.component';
+import { ForCountryComponent } from './pages/for-country/for-country.component';
 import { ForRegionComponent } from './pages/for-region/for-region.component';
-import { SeeCountrieComponent } from './pages/see-countrie/see-countrie.component';
+import { SeeCountyComponent } from './pages/see-country/see-country.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -12,19 +12,19 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ForCapitalComponent,
-    ForCountrieComponent,
+    ForCountryComponent,
     ForRegionComponent,
-    SeeCountrieComponent
+    SeeCountyComponent
   ],
   exports: [
     ForCapitalComponent,
-    ForCountrieComponent,
+    ForCountryComponent,
     ForRegionComponent,
-    SeeCountrieComponent
+    SeeCountyComponent
   ],
   imports: [
     CommonModule,
     FormsModule
   ]
 })
-export class CountrieModule { }
+export class CountryModule { }

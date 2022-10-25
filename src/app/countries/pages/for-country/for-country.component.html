@@ -11,12 +11,13 @@
             placeholder="Buscar país...">
         </form>
     </div>
-</div>
+</div> 
 <hr>
-<div class="alert alert-danger">
-    No se encontró nada con el termino 
+<div *ngIf="bug"
+    class="alert alert-danger">
+    No se encontró nada con el termino {{term}}
 </div>
-<div class="row">
+<div *ngIf="!bug" class="row">
     <div class="col">
         <table class="table table-houver">
             <thead>

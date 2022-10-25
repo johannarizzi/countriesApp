@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CountrieService {
+export class CountryService {
 
   private apiUrl: string = 'https://restcountries.com/v3.1';
 
   constructor(private http: HttpClient) { }
 
-   searchCountrie (term: string): Observable<any> {
+   searchCountry (term: string): Observable<any> {
 
     const url = `${this.apiUrl}/name/${term}`;
     return this.http.get( url );
