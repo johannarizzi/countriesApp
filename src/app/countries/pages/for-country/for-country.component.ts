@@ -21,8 +21,8 @@ export class ForCountryComponent implements OnInit {
     console.log(this.term);
   
     this.countryService.searchCountry(this.term)
-    .subscribe( (resp) => {
-    console.log (resp);
+    .subscribe( (countries) => {
+    console.log (countries);
     }, (err) => {
      this.bug = true;
     }
