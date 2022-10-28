@@ -6,6 +6,8 @@ import { ForRegionComponent } from './pages/for-region/for-region.component';
 import { SeeCountyComponent } from './pages/see-country/see-country.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { CountryTableComponent } from './components/country-table/country-table.component';
+import { CountryInputComponent } from './components/country-input/country-input.component';
 
 
 
@@ -15,7 +17,9 @@ import { RouterModule } from '@angular/router';
     ForCapitalComponent,
     ForCountryComponent,
     ForRegionComponent,
-    SeeCountyComponent
+    SeeCountyComponent,
+    CountryTableComponent,
+    CountryInputComponent
   ],
   exports: [
     ForCapitalComponent,
