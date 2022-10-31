@@ -19,11 +19,11 @@ export class ForCountryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  search() {
+  search( term: string) {
     this.bug = false;
-    console.log(this.term);
-  
-    this.countryService.searchCountry(this.term)
+    this.term = term;
+
+    this.countryService.searchCountry(term)
     .subscribe( (countries) => {
     console.log (countries)
     this.countries = countries;
@@ -34,6 +34,10 @@ export class ForCountryComponent implements OnInit {
     }
     
     );
+  }
+  prompt(term:string) {
+    this.bug = false;
+  
   }
 
 }
